@@ -1,0 +1,23 @@
+{
+  "name": "be-you-js-edition",
+  "version": "1.0.0",
+  "description": "Javascript module of the BeYou series",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -p 8057"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowst/BeYou-js.git"
+  },
+  "author": "Drew Trafton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bowst/BeYou-js/issues"
+  },
+  "homepage": "https://github.com/bowst/BeYou-js#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "dependencies": {}
+}
