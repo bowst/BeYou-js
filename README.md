@@ -6,4 +6,4 @@ Javascript module of the BeYou series
 * Clone the repo
 * Run `npm install`
 * RUn `npm run serve` for the goodness
-* Visit (http://localhost:8057)[http://localhost:8057]
+* Visit [http://localhost:8057](http://localhost:8057)
