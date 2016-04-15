@@ -85,7 +85,7 @@ Now it's your turn!  We're really getting into real world stuff here.  Imagine w
 
 The constructor function should allow this properties to be assigned by passing them to the class constructor in the same order they are laid out above.   If the currentPage is greater than the numberOfPages, the currentPage should be set to 0 and the hasBeenRead property should be set to true
 
-Additionally, the class should have a method called 'turnPage' which adds one to currentPage.  Again, if during this function, the currentPage is greater than or equal to the numberOfPages, the currentPage should be set to 0 and the hasBeenRead property should be set to true.
+Additionally, the class should have a method called 'turnPage' which adds one to currentPage.  Again, if during this function, the currentPage is greater than the numberOfPages, the currentPage should be set to 0 and the hasBeenRead property should be set to true.
 
 Build your class below, the tests will create an instance of the class ahd check to make sure it meets all of the requireemnts laid out above.
 

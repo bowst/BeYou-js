@@ -9,7 +9,7 @@ QUnit.test( "Chapter 1, Lesson 5 - Let's get Classy", function( assert ) {
 	assert.equal(book1.author, "Herman Melville", "Author is set correctly");
 	assert.equal(book1.numberOfPages, 300, "Number Of Pages is set correctly");
 	assert.equal(book1.currentPage, 100, "Current Page is set correctly");
-	assert.equal(book1.hasBeenRead, true, "Current Page is set correctly");
+	assert.equal(book1.hasBeenRead, true, "HasBeenRead is set correctly");
 
 	//test currentPage logic on assignment
 	var book2 = new Book("Moby Dick", "Herman Melville", 300, 301, false);
