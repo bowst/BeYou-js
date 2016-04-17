@@ -25,7 +25,7 @@
 			var scriptName = "Chapter " + lessonAddress[0] + ", Lesson " + lessonAddress[1];
 			console.log("-----------");
 			console.log("Running Lesson: " + scriptName);
-			loadScript(lessonBase + "/index.js", function(){
+			loadScript(lessonBase + "/index.js?_v=" + Math.random() * 1000000, function(){
 				console.log("Ran your code, checking your work...");
 				loadScript(lessonBase + "/test.js", function(){
 					console.log("Completed tests");
