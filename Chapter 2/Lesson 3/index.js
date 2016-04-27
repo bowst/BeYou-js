@@ -111,7 +111,7 @@ console.log(players);
 
 Time for a challenge!  For this one, we're going to pay a visit to our local public library where they've got a problem.  The library is having trouble keeping track of all the books they've loaned out due to the high volume.  They've got a long list of books, and they need to figure out which books are overdue and notify the patron of their overdue books.
 
-Your challenge is to write a function called `listOverdue` that makes this a bit more managable.  Write a function that uses a the known list of users (below) and takes a list of books from the library's database and returns a new array with only a single entry for each user who currently has books overdue and an object literal with the number of days each book is overdue.
+Your challenge is to write a function called `listOverdue` that makes this a bit more managable.  Write a function that uses the known list of users (below) and takes a list of books from the library's database and returns a new array with only a single entry for each user who currently has books overdue and an object literal with the number of days each book is overdue.
 
 */
 
@@ -201,7 +201,7 @@ A few requirements:
 * Note if a user does not have an overdue book, they should not appear on the list
 * Your function should NOT modify the orignal list of users OR books
 * Number of days overdue should be rounded DOWN to the nearest day (based on today's date and time)
-* Your function should ignore books checkout by users that are not on our list of "knownUsers"
+* Your function should ignore books checked out by users that are not on our list of "knownUsers"
 * Function should be called `listOverdue`
 
 GOOD LUCK!!

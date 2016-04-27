@@ -98,8 +98,8 @@ QUnit.test( "Chapter 2, Lesson 3 - Moar Loops and Arrays", function( assert ) {
 	assert.ok(userIds.indexOf(4) == -1, "User without any overdue books does not appear");
 	assert.ok(userIds.indexOf(9) == -1, "Unknown user does not appear");
 
-	assert.ok(results[0].overdue["Guide to Advanced Occlumency"] == 7, "Check #1 that days overdue is correctly");
-	assert.ok(results[1].overdue["Practical Defensive Magic and Its Use Against the Dark Arts"] == 10, "Check #2 that days overdue is correctly");
+	assert.ok(results[0].overdue["Guide to Advanced Occlumency"] == 7, "Check #1 that days overdue is set correctly");
+	assert.ok(results[1].overdue["Practical Defensive Magic and Its Use Against the Dark Arts"] == 10, "Check #2 that days overdue is set correctly");
 	assert.ok(results[2].overdue["Muggle History 101"] == 5, "Check #3 that days overdue is set correctly");
 
 	assert.ok(knownUsers[0].userId == 1 && knownUsers[4].userId == 5 && !knownUsers[0].overdue, "Spot check that knownUsers array is unmodified");

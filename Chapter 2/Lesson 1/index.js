@@ -138,7 +138,7 @@ Now for your challenge!  Write a function called `getCharCategory` that takes a 
 * number-five
 * number-greater-than-five
 
-Your function should return one of the text string listed above, depending on the logical category for the character passed to the function.  (And NO, `y` is NOT a vowel...honestly...)
+Your function should return one of the text strings listed above, depending on the logical category for the character passed to the function.  (And NO, `y` is NOT a vowel...honestly...)
 */
 
 

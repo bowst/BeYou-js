@@ -35,7 +35,7 @@ Another type of loop that I use ALL the time in javascript is the for/in loop.  
 var deadGOTCharacters = ["Eddard", "Joffrey", "Rob", "That One White Walker"];
 
 for(var deceased in deadGOTCharacters){
-	var doICare = deceased != "That One White Walker" && deceased == "Joffrey";
+	var doICare = deceased != "That One White Walker" && deceased != "Joffrey";
 	console.log("Character: " + deceased + ", Do I Care?: " + doICare);
 }
 
@@ -170,7 +170,7 @@ var passedMap = [
 
 /*
 
-Your function should return an array of the x and y coordinates of each square.  These coodinates should be zero-indexed (meaning the first row could be row 0, then 1, 2, 3,etc).  So for the above example, your function should return:
+Your function should return an array of the x and y coordinates of each square.  These coodinates should be zero-indexed (meaning the first row would be row 0, then 1, 2, 3,etc).  So for the above example, your function should return:
 
 */
 
@@ -181,6 +181,12 @@ var result = [
 	[3, 4],
 	[3, 5]
 ];
+
+/*
+
+Write your answer below.  Good luck, Commodore!
+
+*/
 
 
 
