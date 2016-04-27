@@ -136,6 +136,8 @@ There are a bunch more helpful methods you can use to modify arrays, check them 
 
 http://www.w3schools.com/jsref/jsref_obj_array.asp
 
+We'll look at more of these later.
+
 */
 
 
