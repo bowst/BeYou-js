@@ -78,21 +78,51 @@ var testBooks = [
 	}
 ];
 
+var knownUsers = [
+	{
+		userId: 1,
+		name: "Harry Potter"
+	},
+	{
+		userId: 2,
+		name: "Hermoine Grainger"
+	},
+	{
+		userId: 3,
+		name: "Ron Weasley"
+	},
+	{
+		userId: 4,
+		name: "Draco Malfoy"
+	},
+	{
+		userId: 5,
+		name: "Neville Longbottom"
+	}
+];
+
 
 
 QUnit.test( "Chapter 3, Lesson 2 - Users Strike Back", function( assert ) {
-	var results = sortOverdue(testBooks);
+	var results = filterUnknownUsers(testBooks);
 	assert.ok(results && results.length > 0, "Function returned a valid array");
 	assert.ok(typeof results[0] == "object", "Items in array are valid objects");
 	assert.ok(results != testBooks, "Function did NOT sort the passed array");
 
-	var answer = [].concat(testBooks).sort(function(bookA, bookB){
-		if(bookB.dueDate == bookA.dueDate){
-			return 0;
-		}else{
-			return bookA.dueDate > bookB.dueDate ? 1 : -1;
+	var answer = [];
+	[].concat(testBooks).forEach(function(book){
+		var userRef = knownUsers.filter(function(user){
+			return user.userId == book.checkedOutBy;
+		})[0];
+
+		if(!userRef){
+			//cutoff for unknown users
+			return;
 		}
+
+		answer.push(book);
 	});
+	console.log(answer);
 	assert.deepEqual(results, answer, "Final check to make sure everything is 100% correct");
 
 });
