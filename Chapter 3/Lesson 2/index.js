@@ -1,35 +1,13 @@
 /*
 
-Write a function called filterUnknownUsers which takes a list of users and books and returns ONLY those books which have a valid user.
+Write a function called filterUnknownUsers which takes a list of books and returns ONLY overdue books (dueDate is greater than the current date/time).
 
 This function should NOT alter the original array passed to the function.
 
 
-Here is an example of the arrays your function might get passed.
+Here is an example of the array your function might get passed.
 */
 
-var knownUsers = [
-	{
-		userId: 1,
-		name: "Harry Potter"
-	},
-	{
-		userId: 2,
-		name: "Hermoine Grainger"
-	},
-	{
-		userId: 3,
-		name: "Ron Weasley"
-	},
-	{
-		userId: 4,
-		name: "Draco Malfoy"
-	},
-	{
-		userId: 5,
-		name: "Neville Longbottom"
-	}
-];
 
 var books = [
 	{
@@ -67,6 +45,6 @@ var books = [
 /*
 write function below these lines
 */
-var filterUnknownUsers = function(users, booksToTest){
+var filterOutOverdue = function(booksToTest){
 
 };

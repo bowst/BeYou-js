@@ -90,37 +90,22 @@ var knownUsers = [
 	{
 		userId: 3,
 		name: "Ron Weasley"
-	},
-	{
-		userId: 4,
-		name: "Draco Malfoy"
-	},
-	{
-		userId: 5,
-		name: "Neville Longbottom"
 	}
 ];
 
 
 
-QUnit.test( "Chapter 3, Lesson 2 - Users Strike Back", function( assert ) {
-	var results = filterUnknownUsers(testBooks);
+QUnit.test( "Chapter 3, Lesson 2 - Filter out the nonsense", function( assert ) {
+	var results = filterOutOverdue(testBooks);
 	assert.ok(results && results.length > 0, "Function returned a valid array");
 	assert.ok(typeof results[0] == "object", "Items in array are valid objects");
 	assert.ok(results != testBooks, "Function did NOT sort the passed array");
 
-	var answer = [];
-	[].concat(testBooks).forEach(function(book){
-		var userRef = knownUsers.filter(function(user){
-			return user.userId == book.checkedOutBy;
-		})[0];
-
-		if(!userRef){
-			//cutoff for unknown users
-			return;
-		}
-
-		answer.push(book);
+	var today = new Date();
+	//filter out books that are not overdue
+	var answer = testBooks.filter(function(book){
+		var dueDate = new Date(book.dueDate);
+		return dueDate < today;
 	});
 	console.log(answer);
 	assert.deepEqual(results, answer, "Final check to make sure everything is 100% correct");
