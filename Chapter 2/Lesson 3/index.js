@@ -13,7 +13,7 @@ First up, if you haven't already already review some of awesome array methods av
 
 Done skimming?  It's important to note that some array functions modify the existing array while other create a NEW array, leaving the original array un-modified.
 
-For example, the "push" and "concat" functions both add items to the array but have different behaviour with regards to whether or not they modify the original array.
+For example, the "push" and "concat" functions both add items to the array but have different behavior with regards to whether or not they modify the original array.
 
 */
 

@@ -188,6 +188,27 @@ Write your answer below.  Good luck, Commodore!
 
 */
 
+function findEnemyBattleship(dummyMap) {
+    console.log(dummyMap);
+    var hits = [];
+    var x;
+    var y;
+    var i = 0;
+    var j = 0; 
+    while (i < dummyMap.length){
+        while (j < dummyMap[i].length){
+            console.log(dummyMap[i][j]);
+            if (dummyMap[i][j] != 0){
+                hits.push([j,i]);
+            }else{
+            }
+            j++;
+        }
+        i++;
+    }
+    return hits;
+}
+
 
 
 

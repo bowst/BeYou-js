@@ -54,7 +54,7 @@ x >= 4;//true
 
 //less than
 x < 8;//true
-x > 2;//false
+x < 2;//false
 
 //less than or equal to
 x <= 6;//true
@@ -130,7 +130,7 @@ switch(jamieStatus){
 }
 
 /*
-Now for your challenge!  Write a function called `getCharCategory` that takes a random letter or number as an argument.  Your challenge is to use the logical statements above to determine which of the follow conditions the character meets:
+Now for your challenge!  Write a function called `getCharCategory` that takes a random alphanumberic (letter or number) character as an argument.  Your challenge is to use the logical statements above to determine which of the follow conditions the character meets:
 
 * consonant
 * vowel

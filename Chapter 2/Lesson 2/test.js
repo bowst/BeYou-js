@@ -8,10 +8,10 @@
 
 var savedCoords;
 function generateBoard(){
-	var width = Math.floor(Math.random() * 50);
+	var width = Math.floor(Math.random() * 20);
 	width = width > 5 ? width : 5;
 
-	var height = Math.floor(Math.random() * 50);
+	var height = Math.floor(Math.random() * 20);
 	height = height > 5 ? height : 5;
 
 	var map = [];
@@ -24,27 +24,18 @@ function generateBoard(){
 		map.push(row);
 	}
 
-	var startX = Math.floor(Math.random() * width);
-	var startY = Math.floor(Math.random() * height);
+	var startX = Math.floor(Math.random() * (width - 10)) + 5;
+	var startY = Math.floor(Math.random() * (height - 10)) + 5;
 	var vertical = width % 2  == 0;
-	var adjustment = height % 2 == 0 ? 5 : -5;
 
 	var coords = [];
-	if(vertical && map[startY + adjustment] && map[startY + adjustment][startX] == 0){
+	if(vertical){
 		for(var i = 0; i < 5; i++){
 			coords.push([startY + i, startX]);
 		}
-	}else if(vertical && map[startY - adjustment] && map[startY - adjustment][startX] == 0){
-		for(var i = 0; i < 5; i++){
-			coords.push([startY - i, startX]);
-		}
-	}else if(map[startY][startX + adjustment] == 0){
-		for(var i = 0; i < 5; i++){
-			coords.push([startY, startX + i]);
-		}
 	}else{
 		for(var i = 0; i < 5; i++){
-			coords.push([startY, startX - i]);
+			coords.push([startY, startX + i]);
 		}
 	}
 	savedCoords = coords;
@@ -54,6 +45,7 @@ function generateBoard(){
 
 	return map;
 }
+
 /*
 var findEnemyBattleship = function(){
 	var result = [];
@@ -69,8 +61,11 @@ QUnit.test( "Chapter 2, Lesson 2 - Loops and Arrays", function( assert ) {
 	var map = generateBoard();
 
 	var coords = findEnemyBattleship(map);
+	console.log("response");
+	console.log(coords);
 
 	assert.ok(coords && Object.prototype.toString.call(coords) === '[object Array]' , "findEnemyBattleship returned an array");
+	assert.ok(coords.length == 5 , "findEnemyBattleship returned five coordinates");
 	var testNum = 1;
 	coords.forEach(function(location){
 		assert.equal(map[location[1]][location[0]], 1, "Square " + testNum + " is a hit!");
