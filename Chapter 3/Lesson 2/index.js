@@ -1,6 +1,6 @@
 /*
 
-Write a function called filterUnknownUsers which takes a list of books and returns ONLY overdue books (dueDate is greater than the current date/time).
+Write a function called filterOutOverdue which takes a list of books and returns ONLY overdue books (dueDate is greater than the current date/time).
 
 This function should NOT alter the original array passed to the function.
 
