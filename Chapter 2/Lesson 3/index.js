@@ -198,7 +198,7 @@ var result = [
 A few requirements:
 
 * In order to prioritize, the result array should be sorted in order of the user with the most over due book to the user with the least overdue book
-* Note if a user does not have an overdue book, they should not appear on the list
+
 * Your function should NOT modify the orignal list of users OR books
 * Number of days overdue should be rounded DOWN to the nearest day (based on today's date and time)
 * Your function should ignore books checked out by users that are not on our list of "knownUsers"
